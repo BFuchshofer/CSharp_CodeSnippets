@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>opc</Title>
+			<Shortcut>opc</Shortcut>
+			<Description>Code snippet um ein Field und eine Property und ein OnPropertyChanged zu setzen</Description>
+			<Author>Bastian Fuchshofer</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+        </Header>
+        <Snippet>
+		  <Code Language="CSharp">
+			<![CDATA[
+			private $Typ$ $name$;
+			public $Typ$ $Name$ { get { return $name$; } set { $name$ = value; OnPropertyChanged(); } }
+			]]>
+		  </Code>
+		  <Declarations>
+			<Literal>
+			  <ID>Name</ID>
+			  <ToolTip>Der Name der Property</ToolTip>
+			  <Default>Name</Default>
+			</Literal>
+			<Literal>
+			  <ID>name</ID>
+			  <ToolTip>Der Name des Fields</ToolTip>
+			  <Default>name</Default>
+			</Literal>
+			<Literal>
+			  <ID>Typ</ID>
+			  <ToolTip>Der Typ der Property</ToolTip>
+			  <Default>Typ</Default>
+			</Literal>
+		  </Declarations>
+		</Snippet>
+    </CodeSnippet>
+</CodeSnippets>
